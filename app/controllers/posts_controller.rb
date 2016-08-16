@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
 	def index
-    @posts = Post.all
+		# Using Kaminari gem to get posts by most recent and using page method to grab 10
+		# as defined in config/initializers/kaminari
+		# To get next 10 results use <%= paginate @posts %> in index page
+		@posts = Post.order(created_at: :desc).page(params[:page])
 	end
 
 	def show
