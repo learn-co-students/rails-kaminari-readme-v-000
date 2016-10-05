@@ -6,3 +6,6 @@
     <p><%= post.description %></p>
   </div>
 <% end %>
+
+<%= page_entries_info @posts %>
+<%= paginate @posts, window: 2 %>
