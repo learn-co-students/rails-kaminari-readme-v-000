@@ -32,6 +32,7 @@ gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'
