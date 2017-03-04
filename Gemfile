@@ -33,6 +33,9 @@ gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#use kaminari to handle pagination
+gem 'kaminari'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
