@@ -1,8 +1,11 @@
 <h1>Blog Posts!</h1>
+<%= page_entries_info @posts %>
+<%= paginate @posts %>
 <% @posts.each do |post| %>
   <div>
     <p><%= link_to post.title, post_path(post) %><br>
-    by: <%= post.author.name %></p>
+    id: <%= post.id %> by: <%= post.author.name %>--created:<%= post.created_at %></p>
     <p><%= post.description %></p>
   </div>
 <% end %>
+<%= paginate @posts %>
