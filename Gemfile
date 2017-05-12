@@ -48,3 +48,6 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'learn-co'
+gem 'kaminari'
