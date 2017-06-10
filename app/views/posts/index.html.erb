@@ -1,4 +1,8 @@
 <h1>Blog Posts!</h1>
+<%= paginate @posts, window: 2 %>
+<%= page_entries_info @posts %>
+
+<h1>Blog Posts!</h1>
 <% @posts.each do |post| %>
   <div>
     <p><%= link_to post.title, post_path(post) %><br>
