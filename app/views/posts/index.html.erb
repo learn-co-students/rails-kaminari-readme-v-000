@@ -1,4 +1,6 @@
-<h1>Blog Posts!</h1>
+<h1>Blog Posts!</h1>            <!-- page_entries_info && paginate are Kaminari-specific methods, obviously -->
+<%= page_entries_info @posts %> <!-- "Displaying [posts] x-[per_page_limit] of [total [posts]" ==> "Displaying posts 1 - 10 of 303 in total"-->
+<%= paginate @posts, window: 2 %><!-- offers links to page numbers, next/previous and first/last pages. window: x displays x+1 page number links to click -->
 <% @posts.each do |post| %>
   <div>
     <p><%= link_to post.title, post_path(post) %><br>
