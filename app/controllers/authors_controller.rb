@@ -32,3 +32,5 @@ class AuthorsController < ApplicationController
     params.require(:author).permit(:bio, :name)
   end
 end
+
+#arbitrary change to try to fix submit not working
